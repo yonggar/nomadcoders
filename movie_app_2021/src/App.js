@@ -1,26 +1,43 @@
-import React, { useEffect } from "react";
-import {useState} from 'react'
+import React from "react";
+import {useState, useEffect} from 'react'
+import axios from 'axios'
+import Movie from "./movies";
 
 function App() {
-  const [count,setCount]=useState(0)
   const [isLoding,setLoding]=useState(true)
-
-  function minus(num) {
-    return setCount(num-1)
+  const [movies,setMovies]=useState([])
+  
+  async function getMovies() {
+    const {data:{data:{movies}}}= await axios.get('https://yts.mx/api/v2/list_movies.json?sort_by=raitng')
+    setMovies(movies)
   }
 
-  useEffect(()=>{
-    setLoding(false)
-    console.log('마운트 될 때만')
-  },[count])
+  function loding(){
+    setTimeout(()=>{setLoding(false)},2000)
+  }
+
+  useEffect(getMovies,[])
+  useEffect(loding,[isLoding])
 
   return (
-  <div>
-    <div>{isLoding ? 'Loding...':'we are ready'}</div>
-    <div>{count}</div>
-    <button onClick={()=>setCount(count+1)}>plus</button>
-    <button onClick={()=>minus(count)}>minus</button>
-  </div>
+  <section className='container'>
+    {isLoding
+    ? <div className='loader'>
+        <span className='loader__text_'>Loding...</span> 
+      </div>
+    : <div className='movies'>
+      {movies.map(el=>{
+      // console.log(el)
+      return <Movie 
+      key={el.id}
+      title={el.title}
+      year={el.year}
+      summary={el.summary}
+      genres={el.genres}
+      poster={el.medium_cover_image}/>
+    })}
+    </div>}
+  </section>
   );
 }
 
