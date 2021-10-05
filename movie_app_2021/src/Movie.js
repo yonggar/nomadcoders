@@ -1,10 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-<<<<<<< HEAD:movie_app_2021/src/movies.js
-import './movies.css'
-=======
 import './Movie.css'
->>>>>>> bcdf236ceba1563d94f8e546a54e24d4aadaacdf:movie_app_2021/src/Movie.js
 
 function Movie({year,title,summary,poster,genres}){
     return (
@@ -16,11 +12,7 @@ function Movie({year,title,summary,poster,genres}){
             <ul className='movie__genres'>
                 {genres.map((el,index)=><li key={index} className='movie__genres'>{el}</li>)}
             </ul>
-<<<<<<< HEAD:movie_app_2021/src/movies.js
-            <p className='movie__summary'>{summary.slice(0,140)}...</p>
-=======
             <p className='movie__summary'>{summary.slice(0,180)}...</p>
->>>>>>> bcdf236ceba1563d94f8e546a54e24d4aadaacdf:movie_app_2021/src/Movie.js
         </div>
     </div>
     )}
