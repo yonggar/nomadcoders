@@ -2,6 +2,7 @@ import React from "react";
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 import Movie from "./movies";
+import './App.css'
 
 function App() {
   const [isLoding,setLoding]=useState(true)
