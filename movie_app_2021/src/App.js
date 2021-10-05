@@ -1,11 +1,8 @@
 import React from "react";
 import {useState, useEffect} from 'react'
 import axios from 'axios'
-<<<<<<< HEAD
-import Movie from "./movies";
-=======
-import Movie from "./Movie";
->>>>>>> bcdf236ceba1563d94f8e546a54e24d4aadaacdf
+import Movie from './Movie'
+
 import './App.css'
 
 function App() {
