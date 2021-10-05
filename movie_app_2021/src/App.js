@@ -1,7 +1,11 @@
 import React from "react";
 import {useState, useEffect} from 'react'
 import axios from 'axios'
+<<<<<<< HEAD
 import Movie from "./movies";
+=======
+import Movie from "./Movie";
+>>>>>>> bcdf236ceba1563d94f8e546a54e24d4aadaacdf
 import './App.css'
 
 function App() {
@@ -9,7 +13,7 @@ function App() {
   const [movies,setMovies]=useState([])
   
   async function getMovies() {
-    const {data:{data:{movies}}}= await axios.get('https://yts.mx/api/v2/list_movies.json?sort_by=raitng')
+    const {data:{data:{movies}}}= await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating')
     setMovies(movies)
   }
 
