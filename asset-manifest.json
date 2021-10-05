@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/nomadcoders/static/css/main.cff2b782.chunk.css",
+    "main.js": "/nomadcoders/static/js/main.9b500bbf.chunk.js",
+    "main.js.map": "/nomadcoders/static/js/main.9b500bbf.chunk.js.map",
+    "runtime-main.js": "/nomadcoders/static/js/runtime-main.f483c6db.js",
+    "runtime-main.js.map": "/nomadcoders/static/js/runtime-main.f483c6db.js.map",
+    "static/js/2.2c2d396d.chunk.js": "/nomadcoders/static/js/2.2c2d396d.chunk.js",
+    "static/js/2.2c2d396d.chunk.js.map": "/nomadcoders/static/js/2.2c2d396d.chunk.js.map",
+    "index.html": "/nomadcoders/index.html",
+    "static/css/main.cff2b782.chunk.css.map": "/nomadcoders/static/css/main.cff2b782.chunk.css.map",
+    "static/js/2.2c2d396d.chunk.js.LICENSE.txt": "/nomadcoders/static/js/2.2c2d396d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f483c6db.js",
+    "static/js/2.2c2d396d.chunk.js",
+    "static/css/main.cff2b782.chunk.css",
+    "static/js/main.9b500bbf.chunk.js"
+  ]
+}
