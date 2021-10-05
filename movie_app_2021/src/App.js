@@ -1,14 +1,15 @@
 import React from "react";
 import {useState, useEffect} from 'react'
 import axios from 'axios'
-import Movie from "./movies";
+import Movie from "./Movie";
+import './App.css'
 
 function App() {
   const [isLoding,setLoding]=useState(true)
   const [movies,setMovies]=useState([])
   
   async function getMovies() {
-    const {data:{data:{movies}}}= await axios.get('https://yts.mx/api/v2/list_movies.json?sort_by=raitng')
+    const {data:{data:{movies}}}= await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating')
     setMovies(movies)
   }
 
